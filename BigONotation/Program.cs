@@ -33,12 +33,14 @@ class BigONotationDemo
         Console.WriteLine("RunTime " + title + ": " + averageTime.ToString("F9"));
     }
 
+    // Constant time complexity: The operation takes the same amount of time regardless of the size of the input.
     static int NotationO_1(int size)
     {
         int half = size * 2;
         return half;
     }
 
+    // Linear time complexity: The time taken by this operation increases proportionally with the size of the input. 
     static int NotationO_N(int size)
     {
         int sum = 0;
