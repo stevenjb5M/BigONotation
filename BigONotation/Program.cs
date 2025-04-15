@@ -11,20 +11,26 @@ class BigONotationDemo
 
         foreach (var size in inputSizes)
         {
-            MeasureTime(() => NotationO_1(size));
-            MeasureTime(() => NotationO_N(size));
+            MeasureTime(() => NotationO_1(size), "O(1)");
+            MeasureTime(() => NotationO_N(size), "O(N)");
         }
     }
 
-    static void MeasureTime(Action functionToRun) {
+    static void MeasureTime(Action functionToRun, string title) {
+        const int iterations = 1000;
         Stopwatch stopWatch = new Stopwatch();
         stopWatch.Start();
-        functionToRun();
+        for (int i = 0; i < iterations; i ++)
+        {
+            functionToRun();
+        }
         stopWatch.Stop();
 
         TimeSpan ts = stopWatch.Elapsed;
         
-        Console.WriteLine("RunTime " + ts);
+        double averageTime = ts.TotalSeconds / iterations;
+        
+        Console.WriteLine("RunTime " + title + ": " + averageTime.ToString("F9"));
     }
 
     static int NotationO_1(int size)
@@ -36,9 +42,9 @@ class BigONotationDemo
     static int NotationO_N(int size)
     {
         int sum = 0;
-        for (int t = 0; t < size; t++)
+        for (int i = 0; i <= size; i++)
         {
-            sum+=t;
+            sum += i;
         }
 
         return sum;
