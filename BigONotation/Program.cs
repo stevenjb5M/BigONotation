@@ -13,7 +13,7 @@ class BigONotationDemo
         {
             MeasureTime(() => NotationO_1(size), "O(1)");
             MeasureTime(() => NotationO_N(size), "O(N)");
-            //MeasureTime(() => NotationO_N2(size), "O(N^2)");
+            MeasureTime(() => NotationO_N2(size), "O(N^2)");
             MeasureTime(() => NotationO_LogN(size), "O(log N)");   
         }
     }
