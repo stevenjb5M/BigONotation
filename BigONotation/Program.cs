@@ -13,11 +13,12 @@ class BigONotationDemo
         {
             MeasureTime(() => NotationO_1(size), "O(1)");
             MeasureTime(() => NotationO_N(size), "O(N)");
+            MeasureTime(() => NotationO_N2(size), "O(N^2)");
         }
     }
 
     static void MeasureTime(Action functionToRun, string title) {
-        const int iterations = 1000;
+        const int iterations = 10;
         Stopwatch stopWatch = new Stopwatch();
         stopWatch.Start();
         for (int i = 0; i < iterations; i ++)
@@ -55,11 +56,19 @@ class BigONotationDemo
     // Quadratic complexity: Time taken increases quadratically 
     static int NotationO_N2(int size)
     {
-        const int firstMatchSum = 0;
+        int firstMatchSum = 0;
         for (int i = 0; i < size; i++) 
         {
-                
+            for (int j = size; j > 0; j--)
+            {
+                if (i == j)
+                {
+                    firstMatchSum = i + j;
+                }
+            }
         }
+
+        return firstMatchSum;
     }
 
 }
