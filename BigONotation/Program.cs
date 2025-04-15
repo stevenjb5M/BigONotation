@@ -74,6 +74,21 @@ class BigONotationDemo
         return firstMatchSum;
     }
 
+    // O(N log N): Example of sorting algorithm like Merge Sort or Quick Sort
+    static int[] NotationO_NLogN(int size)
+    {
+        int[] array = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++)
+        {
+            array[i] = random.Next(1, size);
+        }
+
+        Array.Sort(array); // Sorting has O(N log N) complexity
+        return array;
+    }
+
     // Logarithmic Complexity O(log N): The number of steps grows very slowy as N increase
     static bool NotationO_LogN(int size)
     {
@@ -126,5 +141,7 @@ class BigONotationDemo
 
         throw new ArgumentException("No solution found");
     }
+
+
 
 }
