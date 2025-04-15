@@ -5,7 +5,7 @@ class BigONotationDemo
 {
     static void Main(string[] args)
     {
-        int[] inputSizes = { 100, 1000, 10000, 100000};
+        int[] inputSizes = [100, 1000, 10000, 100000];
 
         Console.WriteLine("Big O Notation Timer");
 
@@ -105,7 +105,7 @@ class BigONotationDemo
     // Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to the target.
     static int[] TwoSum(int target)
     {
-        int[] nums = [ 2, 4, 5, 3, 6, 7];
+        int[] nums = [2, 4, 5, 3, 6, 7];
 
         Dictionary<int, int> seen = new Dictionary<int, int>();
 
@@ -115,7 +115,7 @@ class BigONotationDemo
 
             if (seen.ContainsKey(complement))
             {
-                return new int[] { seen[complement], i};
+                return [seen[complement], i];
             }
 
             if (!seen.ContainsKey(nums[i]))
