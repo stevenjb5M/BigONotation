@@ -15,6 +15,8 @@ class BigONotationDemo
             MeasureTime(() => NotationO_N(size), "O(N)");
             MeasureTime(() => NotationO_N2(size), "O(N^2)");
             MeasureTime(() => NotationO_LogN(size), "O(log N)");   
+
+            TwoSum([3,3], 9);
         }
     }
 
@@ -98,6 +100,31 @@ class BigONotationDemo
         }
 
         return false;
+    }
+
+    // Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to the target.
+    static int[] TwoSum(int[] nums, int target)
+    {
+        nums = [ 2, 4, 5, 3, 6, 7];
+
+        Dictionary<int, int> seen = new Dictionary<int, int>();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int complement = target - nums[i];
+
+            if (seen.ContainsKey(complement))
+            {
+                return new int[] { seen[complement], i};
+            }
+
+            if (!seen.ContainsKey(nums[i]))
+            {
+                seen[nums[i]] = 1;
+            }
+        }
+
+        throw new ArgumentException("No solution found");
     }
 
 }

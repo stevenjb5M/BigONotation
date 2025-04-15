@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BigONotation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19af4d9e4b2f9fac1d0887dbb0db2c3657035ab2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1af7ed40bc0ecc00c44db7aac3ececd54c562a64")]
 [assembly: System.Reflection.AssemblyProductAttribute("BigONotation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BigONotation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
