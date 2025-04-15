@@ -1,0 +1,15 @@
+/Users/stevenbrown/BigONotation/BigONotation/bin/Debug/net9.0/BigONotation
+/Users/stevenbrown/BigONotation/BigONotation/bin/Debug/net9.0/BigONotation.deps.json
+/Users/stevenbrown/BigONotation/BigONotation/bin/Debug/net9.0/BigONotation.runtimeconfig.json
+/Users/stevenbrown/BigONotation/BigONotation/bin/Debug/net9.0/BigONotation.dll
+/Users/stevenbrown/BigONotation/BigONotation/bin/Debug/net9.0/BigONotation.pdb
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.AssemblyInfoInputs.cache
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.AssemblyInfo.cs
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.csproj.CoreCompileInputs.cache
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.sourcelink.json
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.dll
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/refint/BigONotation.dll
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.pdb
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/BigONotation.genruntimeconfig.cache
+/Users/stevenbrown/BigONotation/BigONotation/obj/Debug/net9.0/ref/BigONotation.dll
