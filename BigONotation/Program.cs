@@ -153,7 +153,7 @@ class BigONotationDemo
         if (amount > 0)
         {
             int currentAmount = 0;
-            int[] usedCoins = [];
+            List<int> usedCoins = new List<int>();
             Array.Sort(coins, (a, b) => b.CompareTo(a));
 
             for (int i = 0; i < coins.Length; i++)
@@ -164,7 +164,7 @@ class BigONotationDemo
                     usedCoins.Append(coins[i]);
                     currentAmount = thisCoinSum;
                     Console.WriteLine("Coins Used: " + usedCoins);
-                    return usedCoins.Length;
+                    return usedCoins.Count;
                 }
                 else if (thisCoinSum < amount)
                 {
