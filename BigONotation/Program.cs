@@ -11,12 +11,17 @@ class BigONotationDemo
 
         foreach (var size in inputSizes)
         {
-            MeasureTime(() => NotationO_1(size), "O(1)");
-            MeasureTime(() => NotationO_N(size), "O(N)");
-            MeasureTime(() => NotationO_N2(size), "O(N^2)");
-            MeasureTime(() => NotationO_LogN(size), "O(log N)");   
+            // MeasureTime(() => NotationO_1(size), "O(1)");
+            // MeasureTime(() => NotationO_N(size), "O(N)");
+            // MeasureTime(() => NotationO_N2(size), "O(N^2)");
+            // MeasureTime(() => NotationO_LogN(size), "O(log N)");   
 
-            int[] test = TwoSum(9);
+            // int[] test = TwoSum(9);
+
+            int[] coins = {1, 5, 10, 25};
+            int amount = 116;
+
+            CoinChange(coins, amount);
         }
     }
 
@@ -143,5 +148,33 @@ class BigONotationDemo
     }
 
     
+    public static int CoinChange(int[] coins, int amount)
+    {
+        if (amount > 0)
+        {
+            int currentAmount = 0;
+            int[] usedCoins = [];
+            Array.Sort(coins, (a, b) => b.CompareTo(a));
+
+            for (int i = 0; i < coins.Length; i++)
+            {
+                int thisCoinSum = currentAmount + coins[i];
+                if (thisCoinSum == amount)
+                {
+                    usedCoins.Append(coins[i]);
+                    currentAmount = thisCoinSum;
+                    Console.WriteLine("Coins Used: " + usedCoins);
+                    return usedCoins.Length;
+                }
+                else if (thisCoinSum < amount)
+                {
+                    usedCoins.Append(coins[i]);
+                    currentAmount = thisCoinSum;
+                }
+            }
+        }
+
+        return -1;
+    }
 
 }
