@@ -61,11 +61,20 @@ class BigONotationDemo
         return sum;
     }
 
+    // Linear time complexity O(N): The time taken by this operation increases proportionally with the size of the input.
+static void PrintNumbers(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+
     // Quadratic complexity O(N^2): Time taken increases quadratically 
     static int NotationO_N2(int size)
     {
         int firstMatchSum = 0;
-        for (int i = 0; i < size; i++) 
+        for (int i = 0; i < size; i++)
         {
             for (int j = size; j > 0; j--)
             {
@@ -156,20 +165,24 @@ class BigONotationDemo
             List<int> usedCoins = new List<int>();
             Array.Sort(coins, (a, b) => b.CompareTo(a));
 
-            for (int i = 0; i < coins.Length; i++)
+            for (int i = 0; i < coins.Length;)
             {
                 int thisCoinSum = currentAmount + coins[i];
                 if (thisCoinSum == amount)
                 {
-                    usedCoins.Append(coins[i]);
+                    usedCoins.Add(coins[i]);
                     currentAmount = thisCoinSum;
                     Console.WriteLine("Coins Used: " + usedCoins);
                     return usedCoins.Count;
                 }
                 else if (thisCoinSum < amount)
                 {
-                    usedCoins.Append(coins[i]);
+                    usedCoins.Add(coins[i]);
                     currentAmount = thisCoinSum;
+                }
+                else
+                {
+                    i++;
                 }
             }
         }
