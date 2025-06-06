@@ -70,6 +70,18 @@ static void PrintNumbers(int n)
     }
 }
 
+// Quadratic time complexity O(N^2): The time taken increases quadratically with the size of the input.
+static void PrintPairs(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            Console.WriteLine($"Pair: ({i}, {j})");
+        }
+    }
+}
+
     // Quadratic complexity O(N^2): Time taken increases quadratically 
     static int NotationO_N2(int size)
     {
